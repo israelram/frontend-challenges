@@ -1,0 +1,223 @@
+    /* Import fonts*/
+    
+    @font-face {
+      font-family: 'RHD900';
+      src: url('fonts/RedHatDisplayBlack.eot');
+      src: url('fonts/RedHatDisplayBlack.eot') format('embedded-opentype'), url('fonts/RedHatDisplayBlack.woff2') format('woff2'), url('fonts/RedHatDisplayBlack.woff') format('woff'), url('fonts/RedHatDisplayBlack.ttf') format('truetype'), url('fonts/RedHatDisplayBlack.svg#RedHatDisplayBlack') format('svg');
+  }
+  
+  @font-face {
+      font-family: 'RHD700';
+      src: url('fonts/RedHatDisplayBold.eot');
+      src: url('fonts/RedHatDisplayBold.eot') format('embedded-opentype'), url('fonts/RedHatDisplayBold.woff2') format('woff2'), url('fonts/RedHatDisplayBold.woff') format('woff'), url('fonts/RedHatDisplayBold.ttf') format('truetype'), url('fonts/RedHatDisplayBold.svg#RedHatDisplayBold') format('svg');
+  }
+  
+  @font-face {
+      font-family: 'RHD500';
+      src: url('fonts/RedHatDisplayMedium.eot');
+      src: url('fonts/RedHatDisplayMedium.eot') format('embedded-opentype'), url('fonts/RedHatDisplayMedium.woff2') format('woff2'), url('fonts/RedHatDisplayMedium.woff') format('woff'), url('fonts/RedHatDisplayMedium.ttf') format('truetype'), url('fonts/RedHatDisplayMedium.svg#RedHatDisplayMedium') format('svg');
+  }
+  /* Declaring global variables*/
+  
+   :root {
+      --primary-pale: hsl(225, 100%, 94%);
+      --primary-bright: hsl(245, 75%, 52%);
+      --very-pale: hsl(225, 100%, 98%);
+      --desaturated: hsl(224, 23%, 55%);
+      --dark-blue: hsl(223, 47%, 23%);
+      --font-size: 16px;
+  }
+  
+  * {
+      box-sizing: border-box;
+      font-family: 'RHD500';
+  }
+  
+  body {
+      background-image: url(images/pattern-background-mobile.svg);
+      background-color: var(--primary-pale);
+      background-repeat: no-repeat;
+      display: flex;
+      min-height: 100vh;
+  }
+  
+  main {
+      justify-self: center;
+      align-self: center;
+      background-color: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 8px hsl(225, 100%, 90%);
+      max-width: 90%;
+      margin: auto;
+  }
+  
+  img {
+      max-width: 100%;
+      max-height: auto;
+  }
+  
+  .summary {
+      text-align: center;
+      padding: 1rem 2.3rem;
+      line-height: 2;
+      font-size: .9rem;
+  }
+  
+  .summary h1 {
+      font-family: 'RHD900';
+      font-size: 1.6em;
+  }
+  
+  .plan {
+      background-color: var(--very-pale);
+      margin: .1rem 2.2rem .5rem;
+      padding: .5rem 0;
+      border: none;
+      outline: none;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: .8rem;
+  }
+  
+  .annual {
+      line-height: .5;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 10px;
+      text-align: left;
+  }
+  
+  .annual>img {
+      max-height: 3em;
+      max-width: auto;
+      padding: .1rem;
+  }
+  
+  .price {
+      margin-left: 1.1rem;
+  }
+  
+  .change {
+      margin-right: 1rem;
+  }
+  
+  .change button {
+      border: none;
+      outline: none;
+      background-color: inherit;
+      color: var(--primary-bright);
+      text-decoration: underline;
+      cursor: pointer;
+      font-size: .7rem;
+  }
+  
+  .links {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      font-size: .8rem;
+  }
+  
+  .proceed {
+      color: white;
+      background-color: var(--primary-bright);
+      margin: 1.2rem 2.2rem 1rem;
+      padding: .8rem 0;
+      box-shadow: 0 12px 10px hsla(245, 75%, 52%, .2);
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+  }
+  
+  .cancel {
+      background-color: rgba(255, 255, 255, .1);
+      text-decoration: none;
+      margin: 0 2.2rem 1rem;
+      padding: 12px 0;
+      border-radius: 8px;
+      cursor: pointer;
+  }
+  
+  h2 {
+      font-size: .8rem;
+      color: black;
+      margin: 1rem 0;
+  }
+  
+  p,
+  .cancel {
+      color: var(--desaturated);
+  }
+  
+  .attribution {
+      font-size: 11px;
+      text-align: center;
+  }
+  
+  .attribution a {
+      color: hsl(228, 45%, 44%);
+  }
+  /* Hover States */
+  
+  .proceed:hover {
+      background-color: hsla(245, 75%, 52%, .7);
+  }
+  
+  .cancel:hover {
+      color: black;
+  }
+  
+  .change>button:hover {
+      text-decoration: none;
+      color: hsla(245, 75%, 52%, .7);
+  }
+  /*focus-visible style*/
+  
+  button:focus-visible {
+      box-shadow: 0 0 3pt 2pt black;
+  }
+  /* Desktop Media Query */
+  
+  @media all and (min-width:376px) {
+      body {
+          background-image: url(images/pattern-background-desktop.svg);
+          background-color: var(--primary-pale);
+          background-repeat: no-repeat;
+          background-size: 100% 50%;
+          grid-template-columns: 100vw;
+      }
+      main {
+          max-width: 22.5rem;
+          border-radius: 13px;
+      }
+      img {
+          max-width: 100%;
+          max-height: auto;
+      }
+      .summary {
+          font-size: .8rem;
+          line-height: 1.5;
+          padding: 1rem 3rem;
+      }
+      .summary h1 {
+          margin-bottom: 0;
+      }
+      .plan {
+          font-size: .75rem;
+          padding: .5rem 0;
+          margin: -1rem 2.2rem 0;
+      }
+      .proceed {
+          padding: .8rem 0;
+          font-size: .8rem;
+      }
+      .cancel {
+          padding: 10px 0;
+          font-size: .8rem;
+      }
+  }
