@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj/hub/order-summary-card-Woq3GpAxr)
+- Live Site URL: [Order Summary Card](https://app.netlify.com/sites/is-order-summary/overview)
 
 ## My process
 
